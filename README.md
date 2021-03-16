@@ -12,4 +12,57 @@ ex) < style > h1 { color:blue;  font: 25px; } tag지정->원하는 속성값
 						
 CSS를 직접 적는것을 inline CSS, CSS 파일을 include 하는것을 external CSS라고 함	
 같은 selector를 가리키는 CSS가 여러개이면, 가장 마지막 스타일이 적용된다						
-CSS는 위에서 아래로 차례대로 읽힌다 / 브라우저는 위에서 아래로 코드를 읽으므로 마지막에 있는 코드가 보여지게 된다
+CSS는 위에서 아래로 차례대로 읽힌다 / 브라우저는 위에서 아래로 코드를 읽으므로 마지막에 있는 코드가 보여지게 된다						
+						
+block(옆에 아무것도 올 수 없음) [ div, p, header ]의 반대말은 inline(같은줄에 위치 할 수 있다 in the same line) [image,a,span등]						
+display로 block or inline으로 변경할 수 있음						
+inline은 높이와 너비가 없음 즉 block tag에 inline을 적용할 때 높이와 너비를 설정하면 안됨 						
+반대로 block은 높이와 너비를 설정할 수 있음						
+inline에 높이와 너비를 설정하고 싶으면 display: inline-block; 사용 (단점: 모니터 크기가 다르면 달라짐)						
+margin = box의 border(경계)로부터 바깥에 있는 공간/ 없애려면 margin:0; , 원하는크기가 있으면 margin-left ,top,right...:50px; 등						
+margin 값을 한번에 주는법 첫번째 위 오른쪽 아래 왼쪽 시계방향순, 하나만 적으면 모두가 해당 두개적으면 상하 좌우 margin: 20px 15px ;						
+collasing margin 현상 (상하에서만 발생) div margin이 body margin과 만나면 둘 중 큰 값의 margin으로 body에 적용되고, 						
+body와 div margin은 하나로 취급						
+						
+padding= box의 경계로부터 안쪽에 있는 공간						
+						
+같은 태그일 경우 id를 통해 각각의 스타일을 낼 수  있음						
+각 id는 #{}으로 태그해줌						
+한 요소는 하나의 id만을 가질 수 있다						
+각기 다른 id를 같은 요소를 줄 때 #1,2,3{} 으로 콤마로 한번에 적용시킬 수 있다 또는 class사용	
+![](https://images.velog.io/images/krlatnalsl/post/4ba8a0bb-8bf0-4c1c-bb94-72013a16d31b/pasted%20image%200.png)
+						
+class = 여러개의 속성들이 공용으로 사용할 수 있는 스타일 형식						
+.(맨앞온점)속성으로 사용한다						
+여러 요소를 한번에 사용할 수 있다 ex) class=" tomato hello honey"						
+#tomato=id="tomato"  =		.tomato=class="tomato"		
+![](https://images.velog.io/images/krlatnalsl/post/f7fe85d7-2cc9-4bc3-a719-1e3084f6ce86/pasted%20image%200.png)
+![](https://images.velog.io/images/krlatnalsl/post/0778b06a-d22e-4b93-935e-848f51559c40/pasted%20image%200.png)
+border= 말 그대로 box의 경계(border)이다						
+border의 스타일은 border style mdn 구글링						
+border: 2px(굵기) solid(스타일) black(색깔);						
+전체박스에 적용= * { 2px(굵기) solid(스타일) black(색깔); } 						
+전체를 사용했을때 하나는 다른 스타일로 할 경우						
+ex) span{ border-style: dotted; }						
+*는 전체를 뜻한다 사용법 * { }						
+						
+사각면을 둥글게 만들고 싶으면 border-radius: 50px;						
+						
+코드를 한번에 수정하려면 = (win)ctrl+D  (mac)command+D 누르고 방향키로 옮김						
+						
+display는 block 이다						
+
+div 바로 밑 자식에서 span만 효과를 주는 방법 
+div span{ text-decoration: underline;} 하면 div밑에있는 모든 span들이 효과를 가진다 
+div> span{text-decoration: underline;} 하면 바로 밑의 자신만 적용
+![](https://images.velog.io/images/krlatnalsl/post/9189d5e7-02a0-4056-b565-a3e6183b97bc/image.png)
+body-div-p-span(child) 에서 p안에있는 span(child)에만 효과를 주고싶으면 
+stlye에서 p span{} 을 적용시킴
+![](https://images.velog.io/images/krlatnalsl/post/dd1f48d6-b1ef-4fa2-95c0-2f64f411b963/image.png)
+body-div-span-p-span(부모) 에서 p다음에 오는 span에게 효과를 주고싶으면
+p+span{}사용(딱 바로뒤에 오는태그만 가능). 이때 +에 마우스를 올리면 적확히 어디에있는 span인지 미리보기가 된다
+![](https://images.velog.io/images/krlatnalsl/post/b5879282-8e56-418c-8530-165ca69199b1/image.png)
+p~span{} 만약span이 p의 형제인데 바로뒤에 오지않을때 사용
+![](https://images.velog.io/images/krlatnalsl/post/c57394e7-a366-4c68-b26e-86a0122f94f0/image.png)
+
+< a >링크에서 밑줄을 없애고 싶으면 text-decoration:none;을 사용
