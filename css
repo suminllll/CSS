@@ -1,0 +1,15 @@
+css와 HTML을 섞는 방법						
+1. 같은 HTML 파일에 CSS코드를 놓는 방법						
+head tag 안에 syle tag를 추가						
+2. CSS와 HTML을 분리시키는 방법(추천)						
+따로 새파일 CSS 파일을 만든다 ex) styles.css						
+link tag를 이용해 styles.css와 연결하고 rel( relationship 관계)을 이용해 관계를 적어줌						
+styles.css와 이 HTML과의 관계를 말할때, styles.css는 스타일시트라 한다						
+						
+body에서 사용한 tag를 사용하여 그 tag를 꾸며준다 						
+ex) < style > h1 { color:blue;  font: 25px; } tag지정->원하는 속성값	
+![](https://images.velog.io/images/krlatnalsl/post/75ee6d56-9a08-476f-9514-64d8a31a83fb/pasted%20image%200.png)	
+						
+CSS를 직접 적는것을 inline CSS, CSS 파일을 include 하는것을 external CSS라고 함	
+같은 selector를 가리키는 CSS가 여러개이면, 가장 마지막 스타일이 적용된다						
+CSS는 위에서 아래로 차례대로 읽힌다 / 브라우저는 위에서 아래로 코드를 읽으므로 마지막에 있는 코드가 보여지게 된다			
