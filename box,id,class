@@ -1,6 +1,6 @@
 body에서 사용한 tag를 사용하여 그 tag를 꾸며준다 						
 ex) < style > h1 { color:blue;  font: 25px; } tag지정->원하는 속성값	
-![](https://images.velog.io/images/krlatnalsl/post/75ee6d56-9a08-476f-9514-64d8a31a83fb/pasted%20image%200.png)
+https://images.velog.io/images/krlatnalsl/post/75ee6d56-9a08-476f-9514-64d8a31a83fb/pasted%20image%200.png
 						
 CSS를 직접 적는것을 inline CSS, CSS 파일을 include 하는것을 external CSS라고 함	
 같은 selector를 가리키는 CSS가 여러개이면, 가장 마지막 스타일이 적용된다						
