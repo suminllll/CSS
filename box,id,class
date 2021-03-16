@@ -1,3 +1,10 @@
+body에서 사용한 tag를 사용하여 그 tag를 꾸며준다 						
+ex) < style > h1 { color:blue;  font: 25px; } tag지정->원하는 속성값	
+![](https://images.velog.io/images/krlatnalsl/post/75ee6d56-9a08-476f-9514-64d8a31a83fb/pasted%20image%200.png)	
+						
+CSS를 직접 적는것을 inline CSS, CSS 파일을 include 하는것을 external CSS라고 함	
+같은 selector를 가리키는 CSS가 여러개이면, 가장 마지막 스타일이 적용된다						
+CSS는 위에서 아래로 차례대로 읽힌다 / 브라우저는 위에서 아래로 코드를 읽으므로 마지막에 있는 코드가 보여지게 된다
 block(옆에 아무것도 올 수 없음) [ div, p, header ]의 반대말은 inline(같은줄에 위치 할 수 있다 in the same line) [image,a,span등]						
 display로 block or inline으로 변경할 수 있음						
 inline은 높이와 너비가 없음 즉 block tag에 inline을 적용할 때 높이와 너비를 설정하면 안됨 						
