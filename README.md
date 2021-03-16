@@ -67,7 +67,7 @@ p~span{} 만약span이 p의 형제인데 바로뒤에 오지않을때 사용
 
 < a >링크에서 밑줄을 없애고 싶으면 text-decoration:none;을 사용
 
-
+/form/
 body에서 작성한 input을 head-style에서 스타일을 줄때
 [ ]구간선택
 ![](https://images.velog.io/images/krlatnalsl/post/4dd325c2-c26d-4cd3-91a8-b170e5c9a9b0/image.png)
@@ -95,7 +95,7 @@ https://developer.mozilla.org/ko/docs/Web/CSS/Using_CSS_custom_properties
 어떤브라우저에서 작동되는지 이 사이트에서 확인하기, 변수의 기본 사용법이 담겨있음 
 
 
-
+/transition/
 어떤상태에서 다른상태로 '변화'를 애니메이션 으로 만드는것
 
 transition: 변화시키려는것 시간 ease-in-out;
@@ -163,3 +163,51 @@ CSS media query MDN 구글링
 
 
 
+/position/
+레이아웃 보다는 위치를 아주 조금 옮기고 싶을때 사용.
+
+position: fixed; (디폴트는 상단)box가 스크롤을 해도 계속 그자리에 위치해 있음. 단, 이것만 썼을때는 주위의 장애물을 신경쓰지만 top, left, right, bottom중 택1을 쓰면 상관하지 않는다.
+보통 메뉴에 적용
+![](https://images.velog.io/images/krlatnalsl/post/7d9f6f24-ac4f-45d3-ab44-433607fe376a/image.png)
+
+position: static; 레이아웃이 박스를 처음 위치하는 곳에 두는것
+
+relative; 위치를 아주 조금 옮기고 싶을때 사용.
+top, left, right, bottom중 택1을 같이 사용하면서 element가 처음 위치한 곳을 기준으로 수정됨.
+
+**absolute; 
+가장 가까운 부모를 기준으로 맨 오,왼,좌,우로 간다 
+마찬가지로 top, left, right, bottom중 택1을 같이 사용
+
+div: last-child{} 맨 마지막에 있는 요소 first-child{} 맨 첫번째
+두번째를 가리길때는 div:nth-child(2){} 셋, 넷도 숫자만 바꿔주면 됨 (3,4)
+번갈아가면서 적용하고 싶으면 nth-child(even){} even= 짝수 odd=홀수
+세번째마다 적용 하고 싶다=nth-child(3n+1){} 마찬가지로 숫자만 바꿔줌
+id나 class를 따로만드는것 보다 css에서만 지정하는 방법이 훨씬 좋다
+
+pseudo-elements-css구글링 검색
+
+/flex/
+flex는 이동이 자유롭다
+2d(2차원)레이아웃에서 잘 작동함
+
+규칙
+1. 자식 element에는 어떤것도 적지 않아야 한다. 부모에게 적용 
+![](https://images.velog.io/images/krlatnalsl/post/17b64938-54a8-4b45-80e2-4d81756d5f46/image.png)
+2. justify-content로 box이동 가능 center; flex-end; flex-start; space-evenly;등 [주축에 적용]				
+주축=수평(ㅡ)교차축=수직(ㅣ)				
+ align-items 는 교차축에 적용	
+3. justify-content와 align-items를 적용하고 싶으면 먼저 display:flex를 해줘야 한다.
+ 
+ * 만약 body(부모)가 height를 가지고 있지 않으면 align-items를 설정하더라도 바뀌지 않는다. 이미 맨 위아래를 차지하고 중심에 있으니까. 그래서 이경우에는 flex컨테이너, body에 height를 추가하면 된다
+ *vh는 화면크기에 따라 크기가 달라진다
+ 
+ justify-content(주축)와 align-items(교차축)을 바꾸려면, flex-direction: column; 을 사용한다 
+ 
+div에 글자를 입력하고 그 글자를 이동하려면= head의 div에 작성
+부모에 flex를 적용하면 자식도 적용할 수 있다.
+![](https://images.velog.io/images/krlatnalsl/post/d6218648-d6d8-480d-b8de-cb54ac60e1f0/image.png)
+flex-wrap: nowrap(노랩 디폴트); 모든 요소를 같은줄에 있게 만들어준다
+div가 300px의 width를 가지고 있어도 상관없음
+flex-wrap: wrap; div가 300px의 width를 가지고 있으면 그 크기로, 한 줄에 들어가는 만큼 최대한 집어넣고 그게 되지 않으면 다음 줄로 옮김
+flex-direction: row(디퐅트); 주축이 수평. 외에 column; column-reverse;(밑에서 부터위로) row-reverse(밑에서부터 위로, 수평)
