@@ -1,0 +1,58 @@
+
+.img img{
+    margin-top: 100px;
+    width: 350px;
+  }
+  .inputBox, .last, .img{
+    text-align: center;
+  }
+  .inputBox input{
+    height: 30px;
+    width: 500px;
+    border: 1px solid #bbb;
+    font-size: 14px;
+    border-radius: 20px;
+  }
+  
+  .fa-search {
+      position: absolute;
+      left: 140px;
+      top: 245px;
+      margin: 0;
+      opacity: 0.5;
+  }
+  .fa-keyboard {
+      position: absolute;
+      right: 180px;
+      margin-top: 8px;
+        opacity: 0.7;
+    
+  }
+  
+  .fa-microphone {
+      position: relative;
+      right: 30px;
+      margin: 0;
+      color: blue;
+      opacity: 0.6;
+      
+  }
+  
+  .a{
+    margin-top: 20px; 
+    text-align: center;
+  }
+  
+  .box{
+    size: 500px;
+    background-color: lightgray;
+    opacity: 0.5;
+    padding: 11px 13px;
+    border-radius: 5px;
+    font-size: 13px;
+    color: black;
+  }
+  .last a{
+     text-decoration: none;
+  }
+  
